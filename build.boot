@@ -1,10 +1,10 @@
 (set-env!
-  :resource-paths #{"src"})
+  :resource-paths #{"src" "resources"})
 
 
 (task-options!
   pom    {:project 'rowtr/rowtr-css
-          :version "0.1.0"
+          :version "0.1.2"
           :description "common css for rowtr projects"}
   speak  {:theme "woodblock"})
 
