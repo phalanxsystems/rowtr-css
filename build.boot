@@ -1,14 +1,15 @@
 (set-env!
-; :resource-paths #{"src" "resources"}
+  :resource-paths #{"src"}
+  :asset-paths #{"resources"}
   :dependencies  '[[cljsjs/boot-cljsjs            "0.6.0" :scope "test"]])
 
 (require '[cljsjs.boot-cljsjs.packaging :refer :all])
 
 (task-options!
   pom    {:project 'rowtr/rowtr-css
-          :version "0.1.3"
+          :version "0.1.5"
           :description "common css for rowtr projects"}
-  speak  {:theme "woodblock"})
+  notify {:theme "woodblock"})
 
 (def +bootstrap-version+    "3.3.7")
 
@@ -26,7 +27,8 @@
   []
   (comp
     (pom)
-    (jar)))
+    (jar)
+    (notify)))
 
 (deftask install-jar []
   (comp
