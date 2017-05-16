@@ -7,7 +7,7 @@
 
 (task-options!
   pom    {:project 'rowtr/rowtr-css
-          :version "0.1.5"
+          :version "0.1.6"
           :description "common css for rowtr projects"}
   notify {:theme "woodblock"})
 
@@ -22,6 +22,7 @@
   (sift :include #{#"^bootstrap/"})
   (sift :add-resource #{"bootstrap*"})
   )
+
 
 (deftask build-jar
   []
